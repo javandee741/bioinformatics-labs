@@ -1,0 +1,19 @@
+/bioinformatics-labs
+   /code_python
+      gc_content.py
+      reverse_complement.py
+      snp_parser.py
+      notebooks/
+         SNP_analysis.ipynb
+   /pipelines
+      Snakefile
+      nextflow.config
+      docker/
+         Dockerfile
+   /data_samples
+      example.fasta
+      example.vcf
+      README_data.md
+   environment.yml
+   .gitignore
+   README.md
