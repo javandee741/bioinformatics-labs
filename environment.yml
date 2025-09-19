@@ -1,0 +1,15 @@
+﻿name: bioenv
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - biopython
+  - pandas
+  - matplotlib
+  - jupyterlab
+  - samtools
+  - bcftools
+  - blast
+  - fastqc
+  - bowtie2

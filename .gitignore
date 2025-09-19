@@ -1,0 +1,32 @@
+﻿# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Snakemake/Nextflow runtime
+.snakemake/
+work/
+results/
+
+# Logs
+*.log
+
+# Big data (держать ВНЕ Git)
+data/
+*.fastq
+*.bam
+*.sam
+*.cram
+*.vcf.gz
+*.tar
+*.zip
+
+# OS junk
+.DS_Store
+Thumbs.db
