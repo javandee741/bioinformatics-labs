@@ -1,0 +1,28 @@
+repos:
+  # Базовые проверки от pre-commit
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
+  # Форматирование Python кода
+  - repo: https://github.com/psf/black
+    rev: 24.3.0
+    hooks:
+      - id: black
+        language_version: python3
+
+  # Линтер Python
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.1.1
+    hooks:
+      - id: flake8
+
+  # Очистка Jupyter Notebook от лишних метаданных
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.6.1
+    hooks:
+      - id: nbstripout
