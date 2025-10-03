@@ -16,3 +16,4 @@ data/
 *.zip
 .DS_Store
 Thumbs.db
+.obsidian/workspace.json
