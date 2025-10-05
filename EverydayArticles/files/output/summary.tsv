@@ -1,0 +1,9 @@
+file	seq_id	length	invalid_count	invalid_set
+example.fasta	seq1 Human_example_gene	131	0	-
+example.fasta	seq2 Mouse_example_gene	133	1	X
+example1.fasta	seq1 Human_example_gene	164	0	-
+example1.fasta	seq2 Mouse_example_gene	178	1	X
+example2.fasta	seq1 Human_example_gene	198	1	X
+example2.fasta	seq2 Mouse_example_gene	148	2	X
+example3.fasta	seq1 Human_example_gene	197	0	-
+example3.fasta	seq2 Mouse_example_gene	330	1	X
