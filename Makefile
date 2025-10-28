@@ -32,3 +32,17 @@ snakemake-run:
 # Очистка результатов
 clean:
 	rm -f $(RESULTS)/*.tsv $(RESULTS)/*.png
+
+#Snakemake
+snakemake-run:
+	snakemake --cores 2 --printshellcmds
+
+snakemake-force:
+	snakemake --cores 2 --forceall --printshellcmds
+
+snakemake-rerun:
+	snakemake --cores 2 -R amino_stats --printshellcmds
+
+clean-results:
+	rm -f results/*.tsv results/*.png
+
