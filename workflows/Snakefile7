@@ -1,0 +1,53 @@
+rule all:
+    input:
+        "results/report.done"
+
+rule amino_stats:
+    input:
+        fasta="files/protein.fasta"
+    output:
+        tsv="results/amino_stats.tsv"
+    params:
+        plots_dir="results"
+    shell:
+        """
+        python scripts/amino_counter.py \
+            -i {input.fasta} \
+            -o {output.tsv} \
+            --plots-dir {params.plots_dir}
+        """
+
+rule compare_genes:
+    input:
+        human="files/human_cytc.fasta",
+        mouse="files/mouse_cytc.fasta"
+    output:
+        tsv="results/compare_genes.tsv"
+    shell:
+        """
+        python scripts/compare_genes.py \
+            -i1 {input.human} \
+            -i2 {input.mouse} \
+            -o {output.tsv}
+        """
+
+rule plot_gc:
+    input:
+        tsv="results/compare_genes.tsv"
+    output:
+        png="results/gc_comparison.png"
+    shell:
+        """
+        python scripts/plot_gc.py \
+            -i {input.tsv} \
+            -o {output.png}
+        """
+
+rule finalize_report:
+    input:
+        "results/amino_stats.tsv",
+        "results/gc_comparison.png"
+    output:
+        "results/report.done"
+    shell:
+        "echo 'All analyses completed successfully' > {output}"
